@@ -4,9 +4,11 @@
 
  Here is a short recording of the python scripts function when excuted:
 
- 
-
 https://github.com/Hasnake84/Python-password-manager/assets/114637978/8e461813-c29a-4ad6-8418-5b6402b22708
+
+# This Python script creates a simple and secure login system, It stores passwords securely using hashing arlgorithm to prevent storing them in plain text.
+
+# Methods and Functtions used in the passmanager.py script
 
 - import hashlib - This line imports the hashlib library, which lets the script scramble information (like a password) into a unique code.
 
@@ -47,9 +49,22 @@ https://github.com/Hasnake84/Python-password-manager/assets/114637978/8e461813-c
 
 - print("Invalid username or password.") - This line prints a message that the username or password was invalid.
 
+# This script is a simple password generator. It creates a password with a mix of uppercase and lowercase letters, numbers, and symbols, making it more secure. You can change the length of the password by modifying the number you provide when calling the generate_password function.
 
+- import random - This line brings in the random library, which allows the script to pick things at random.
 
+- import string - This line imports the string library, which has collections of characters readily available. 
 
+- def generate_password(lenght: int = 10): - This defines a function called generate_password. This function will create a password for you. The lenght: int = 10 part sets a default length of 10 characters for the password.
 
+- alphabet = string.ascii_letters + string.digits + string.punctuation - This line creates a variable called alphabet. It mixes together all the uppercase and lowercase letters (string.ascii_letters), numbers (string.digits), and 
+  punctuation marks (string.punctuation) from the string library. 
 
- this script is a simple password generator. It creates a password with a mix of uppercase and lowercase letters, numbers, and symbols, making it more secure. You can change the length of the password by modifying the number you provide when calling the generate_password function.
+- password = ''.join(random.choice(alphabet) for i in range(lenght)) - This line creates the password itself. It loops lenght number of times (based on the number you provide or the default 10). Each time through the loop, it picks a 
+  random character from the alphabet.
+
+- return password - This line sends the completed password back out of the generate_password function.
+
+- password = generate_password() - This line calls the generate_password function we defined earlier. 
+
+- print(f"Generated password: {password}") - This line uses a formatted string (f-string) to print out a message that includes the generated password. 
