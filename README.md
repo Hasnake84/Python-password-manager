@@ -1,6 +1,6 @@
 # python-password-manager/generator
 
- Basic phyton scripts for password genertor and password manager
+ Basic phyton scripts for password generator and password manager
 
  Here is a short recording of the python scripts function when excuted:
 
